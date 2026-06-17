@@ -21,6 +21,16 @@ h2 {
     color: hotpink;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
+h3 {
+    font-size: 2em;
+    color: purple;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+h4 {
+    font-size: 1.3em;
+    color: blue;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
 p{
     font-size: 1.3em;
 }
@@ -30,6 +40,7 @@ p{
     border-radius: 21px;
     margin: 2em;
 }
+.purple-line {border: 1px solid purple;}
 nav button{
     padding: 1px 3px;
     margin: 7px;
@@ -91,7 +102,7 @@ a:link {
     border-bottom: 3px solid aquamarine;
     border-top: 3px solid hotpink;
 }
-.center-nav .active {
+.center-nav a.current {
     border-bottom: 3px solid hotpink;
     border-top: 3px solid hotpink;
 }
@@ -105,6 +116,8 @@ padding: 3px;
 width: 15vw;}
 .team {
     display: inline-block;
+    text-align:center;
+    align-items: center;
 }
 
 .overlay-home {
@@ -114,3 +127,7 @@ width: 15vw;}
         width: 45vw;
         margin: 4em;
 }
+form {
+    display: grid;
+    grid-row-gap: 1em;
+    }
