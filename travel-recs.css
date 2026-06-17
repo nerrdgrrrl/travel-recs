@@ -49,9 +49,14 @@ button:hover {
 aside ul, nav ul{list-style: none;}
 aside li{display: flex;}
 aside .social {
-    background-color: lightblue;
+    background-color: hotpink;
     padding: 7px;
     display: inline-flex;
+    align-content: center;
+}
+aside .social:hover {
+    background-color: aquamarine;
+
 }
 a:link {
     color: #fff;
@@ -74,7 +79,7 @@ a:link {
     margin: 0 auto;
 }
 .center-nav li{padding: 7px;margin: 12px;}
-.center-nav a:link, .center-nav a:active {
+.center-nav a:link, .center-nav a:visited {
     color: #222;
     font-size: 1rem;
     font-family:Arial, Helvetica, sans-serif;
@@ -83,8 +88,12 @@ a:link {
     border-top: 3px solid aquamarine;
 
 }
-.center-nav a:hover {
+.center-nav a:hover, .center-nav a:active {
     border-bottom: 3px solid aquamarine;
+    border-top: 3px solid hotpink;
+}
+.center-nav .active {
+    border-bottom: 3px solid hotpink;
     border-top: 3px solid hotpink;
 }
 .search {
