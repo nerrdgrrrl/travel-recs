@@ -60,8 +60,9 @@ function searchTravel() {
                     matches.forEach(item => {
                       resultDiv.innerHTML += `
                         <div class="recommendation">
+                        <h2>Search Results</h2>
                           <img src="${item.imageUrl}" alt="${item.name}">
-                          <h2>${item.name}</h2>
+                          <h3>${item.name}</h3>
                           <p>${item.description}</p>
                         </div>
                       `;
