@@ -28,8 +28,7 @@ p{
     background-color: rgba(255, 255, 255, .9);
     padding: 2em;
     border-radius: 21px;
-    width: 45vw;
-    margin: 4em;
+    margin: 2em;
 }
 nav button{
     padding: 1px 3px;
@@ -104,3 +103,14 @@ a:link {
 input {border: none;
 padding: 3px;
 width: 15vw;}
+.team {
+    display: inline-block;
+}
+
+.overlay-home {
+        background-color: rgba(255, 255, 255, .9);
+        padding: 2em;
+        border-radius: 21px;
+        width: 45vw;
+        margin: 4em;
+}
