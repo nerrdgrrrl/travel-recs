@@ -1,0 +1,97 @@
+body {
+    background: url(./tokyo2.jpg) no-repeat ;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: aquamarine; 
+    margin: 0;
+    padding: 2em; 
+    width: 100vw;
+    display: inline-flex;
+}
+h1 {
+    font-size: 2em;
+    color: hotpink;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+h2 {
+    font-size: 3em;
+    color: hotpink;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    font-size: 1.3em;
+}
+.overlay {
+    background-color: rgba(255, 255, 255, .9);
+    padding: 2em;
+    border-radius: 21px;
+    width: 45vw;
+    margin: 4em;
+}
+nav button{
+    padding: 1px 3px;
+    margin: 7px;
+}
+button {
+    padding: 7px;
+    border-radius: 12px;
+    background-color: aquamarine;
+    font-size: 1rem;
+    border: hotpink 2px solid;
+}
+button:hover {
+    background-color: hotpink;
+
+}
+aside ul, nav ul{list-style: none;}
+aside li{display: flex;}
+aside .social {
+    background-color: lightblue;
+    padding: 7px;
+    display: inline-flex;
+}
+a:link {
+    color: #fff;
+    margin: 7px;
+    float: left;
+}
+.container {    display: inline-flex;
+}
+
+.right-nav{
+    display: inline-flex;
+    align-items: flex-end;
+    position: fixed;
+    right: 2em;
+}
+.center-nav{
+    display: inline-flex;
+    align-items: center;
+    width: 55vw;
+    margin: 0 auto;
+}
+.center-nav li{padding: 7px;margin: 12px;}
+.center-nav a:link, .center-nav a:active {
+    color: #222;
+    font-size: 1rem;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border-bottom: 3px solid hotpink;
+    border-top: 3px solid aquamarine;
+
+}
+.center-nav a:hover {
+    border-bottom: 3px solid aquamarine;
+    border-top: 3px solid hotpink;
+}
+.search {
+    border-radius: 21px;
+    padding: 2px;
+    background-color: #fff;
+}
+input {border: none;
+padding: 3px;
+width: 15vw;}
