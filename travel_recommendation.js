@@ -14,11 +14,11 @@ function searchTravel() {
     fetch('travel_recommendation_api.json')
       .then(response => response.json())
       .then(data => {
-        const reccommendation = [];
+        const recommendation = [];
         
         data.countries.forEach(country => {
             country.cities.forEach(city => {
-                reccommendation.push({
+                recommendation.push({
                     name: city.name, 
                     imageUrl: city.imageUrl, 
                     description: city.description, 
@@ -29,7 +29,7 @@ function searchTravel() {
       });
 
         data.temples.forEach(temple => {
-                reccommendation.push({
+                recommendation.push({
                     name: temple.name, 
                     imageUrl: temple.imageUrl, 
                     description: temple.description, 
@@ -39,15 +39,16 @@ function searchTravel() {
             });
             
             data.beaches.forEach(beach => {
-                    reccommendation.push({
+                    recommendation.push({
                         name: beach.name, 
                         imageUrl: beach.imageUrl, 
                         description: beach.description, 
                         countryName: beach.name,
                         category: 'beach'
                     });
-                });            
-                const matches = reccommendation.filter(item => {
+                });       
+     
+                const matches = recommendation.filter(item => {
                     if (input === 'beach' || input === 'beaches') return item.category === 'beach';
                     if (input === 'temple' || input === 'temples') return item.category === 'temple';
                     if (input === 'country' || input === 'countries') return item.category === 'country';
@@ -55,11 +56,10 @@ function searchTravel() {
                     return item.name.toLowerCase().includes(input) ||
                            item.countryName.toLowerCase().includes(input);
                   });
-          
+
                   if (matches.length > 0) {
                     matches.forEach(item => {
                       resultDiv.innerHTML += `
-                                               <h2>Search Results</h2>
 
                         <div class="recommendation">
                           <img src="${item.imageUrl}" alt="${item.name}">
@@ -72,12 +72,14 @@ function searchTravel() {
                     resultDiv.innerHTML = 'Destination not found.';
                   }
                 })
+                
 
                     .catch(error => {
                         console.error('Error:', error);
                         resultDiv.innerHTML = 'An error occurred while fetching data.';
                       });
           }
+
     btnSearch.addEventListener('click', searchTravel);
 
     btnReset.addEventListener('click', resetForm);
